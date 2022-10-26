@@ -151,26 +151,25 @@ function printHobbies(anArrayOfObject) {
     });
   });
 }
-printHobbies(users)
+printHobbies(users);
 
 // Question 8
 
 function findHometownByState(anArrayOfObject) {
-    return anArrayOfObject.find((element) => {
-      return element["hometown"]["state"] === "CA";
-    });
-  }
-  console.log(findHometownByState(users))
+  return anArrayOfObject.find((element) => {
+    return element["hometown"]["state"] === "CA";
+  });
+}
+console.log(findHometownByState(users));
 
 // Question 9
 
 function allLanguages(anArrayOfObject) {
-    return anArrayOfObject.map(function (element) {
-      return element.favoriteLanguages;
-    });
-  }
-  console.log(allLanguages(users))
-
+  return anArrayOfObject.map(function (element) {
+    return element.favoriteLanguages;
+  });
+}
+console.log(allLanguages(users));
 
 // Question 10
 
@@ -185,25 +184,25 @@ function allLanguages(anArrayOfObject) {
   });
   return newArray;
 }
-console.log(allLanguages(users))
+console.log(allLanguages(users));
 
 // Question 11
 
-function hasFavoriteEditor(anArrayOfObject) {
+function hasFavoriteEditor(anArrayOfObject, nameOfEditor) {
   return anArrayOfObject.some(function (element) {
-    return element["favoriteEditor"] === "Eclipse";
+    return element["favoriteEditor"] === nameOfEditor;
   });
 }
-console.log(hasFavoriteEditor(users))
+console.log(hasFavoriteEditor(users, "VS Code"));
 
 // Question 12
 
-function findByUsername(anArrayOfObject) {
+function findByUsername(anArrayOfObject, nameOfUser) {
   return anArrayOfObject.filter((element) => {
-    return element["username"] === "david";
+    return element["username"] === nameOfUser;
   });
 }
-console.log(findByUsername(users))
+console.log(findByUsername(users, "david"));
 
 // Part 2
 
@@ -221,9 +220,9 @@ function vowelCount(aString) {
       }
     }
   }
-    return newObject
+  return newObject;
 }
-console.log(vowelCount("awesome"))
+console.log(vowelCount("awesome"));
 
 // Question 14
 
@@ -236,4 +235,4 @@ function removeVowels(anotherString) {
   }
   return newArray;
 }
-console.log(removeVowels('amazing'))
+console.log(removeVowels("amazing"));
